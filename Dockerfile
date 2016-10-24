@@ -3,8 +3,8 @@ MAINTAINER Yuhao Zhang <github@yuha0.com>
 
 RUN apt-get update && apt-get install wget python -y \
  && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - \
- && wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/db \
- && chmod +x /usr/local/db \
+ && wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/db \
+ && chmod +x /usr/local/bin/db \
  && rm -rf /var/lib/apt/lists/*
 
 VOLUME ["/root/.dropbox", "/root/Dropbox"]
